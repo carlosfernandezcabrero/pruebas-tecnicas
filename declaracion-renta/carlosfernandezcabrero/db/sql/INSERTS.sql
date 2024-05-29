@@ -1,0 +1,122 @@
+DELETE FROM BANCO1;
+DELETE FROM BANCO2;
+DELETE FROM EMPRESA1;
+DELETE FROM EMPRESA2;
+
+BEGIN TRANSACTION;
+
+insert into BANCO1 (CIF, DNI, TIPO, BRUTO, RET) values ('33333333-V', '11111111-B', 1, 300, 75);
+insert into BANCO1 (CIF, DNI, TIPO, BRUTO, RET) values ('33333333-V', '11111111-B', 2, 100, 25);
+insert into BANCO1 (CIF, DNI, TIPO, BRUTO, RET) values ('33333333-V', '11111111-C', 1, 100, 25);
+insert into BANCO1 (CIF, DNI, TIPO, BRUTO, RET) values ('33333333-V', '11111111-D', 1, 0, 0);
+insert into BANCO1 (CIF, DNI, TIPO, BRUTO, RET) values ('33333333-V', '11111111-D', 2, 10, 2);
+insert into BANCO1 (CIF, DNI, TIPO, BRUTO, RET) values ('33333333-V', '11111111-D', 3, 20, 4);
+-- insert into BANCO1 (CIF, DNI, TIPO, BRUTO, RET) values ('33333333-V', '11111111-E', 1, 200, 47);
+
+insert into BANCO2 (CIF, DNI, TIPO, BRUTO, RET) values ('44444444-X', '11111111-F', 1, 50, 20);
+insert into BANCO2 (CIF, DNI, TIPO, BRUTO, RET) values ('44444444-X', '11111111-F', 2, 100, 25);
+insert into BANCO2 (CIF, DNI, TIPO, BRUTO, RET) values ('44444444-X', '11111111-G', 1, 200, 50);
+insert into BANCO2 (CIF, DNI, TIPO, BRUTO, RET) values ('44444444-X', '11111111-E', 1, 200, 47);
+insert into BANCO2 (CIF, DNI, TIPO, BRUTO, RET) values ('44444444-X', '11111111-E', 2, 200, 47);
+
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-B', TO_DATE('31-01-2016', '%d-%m-%Y'), 1500, 200, 40);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-B', TO_DATE('29-02-2016', '%d-%m-%Y'), 1500, 200, 40);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-B', TO_DATE('31-03-2016', '%d-%m-%Y'), 1500, 200, 40);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-B', TO_DATE('30-04-2016', '%d-%m-%Y'), 1500, 200,40);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-B', TO_DATE('31-05-2016', '%d-%m-%Y'), 1500, 200, 40);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-B', TO_DATE('30-06-2016', '%d-%m-%Y'), 3000, 400, 80);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-C', TO_DATE('31-01-2016', '%d-%m-%Y'), 1000, 100, 30);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-C', TO_DATE('29-02-2016', '%d-%m-%Y'), 1000, 100, 30);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-C', TO_DATE('31-03-2016', '%d-%m-%Y'), 1000, 100, 30);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-C', TO_DATE('30-04-2016', '%d-%m-%Y'), 1000, 100, 30);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-C', TO_DATE('31-05-2016', '%d-%m-%Y'), 500, 50, 200);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-C', TO_DATE('30-06-2016', '%d-%m-%Y'), 2000, 200, 60);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-D', TO_DATE('31-01-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-D', TO_DATE('29-02-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-D', TO_DATE('31-03-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-D', TO_DATE('30-04-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-D', TO_DATE('31-05-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-D', TO_DATE('30-06-2016', '%d-%m-%Y'), 4000, 300, 90);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-I', TO_DATE('31-01-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-I', TO_DATE('29-02-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-I', TO_DATE('31-03-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-I', TO_DATE('30-04-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-I', TO_DATE('31-05-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA1 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('11111111-A', '11111111-I', TO_DATE('30-06-2016', '%d-%m-%Y'), 4000, 300, 90);
+
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-E', TO_DATE('31-01-2016', '%d-%m-%Y'), 750, 75, 10);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-E', TO_DATE('29-02-2016', '%d-%m-%Y'), 750, 75, 10);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-E', TO_DATE('31-03-2016', '%d-%m-%Y'), 750, 75, 10);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-E', TO_DATE('30-04-2016', '%d-%m-%Y'), 750, 75, 10);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-E', TO_DATE('31-05-2016', '%d-%m-%Y'), 750, 75, 10);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-E', TO_DATE('30-06-2016', '%d-%m-%Y'), 1500, 150, 10);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-F', TO_DATE('31-01-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-F', TO_DATE('29-02-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-F', TO_DATE('31-03-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-F', TO_DATE('30-04-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-F', TO_DATE('31-05-2016', '%d-%m-%Y'), 2000, 150, 45);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-F', TO_DATE('30-06-2016', '%d-%m-%Y'), 2000, 150, 90);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-G', TO_DATE('31-01-2016', '%d-%m-%Y'), 4000, 300, 90);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-G', TO_DATE('29-02-2016', '%d-%m-%Y'), 4000, 300, 90);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-G', TO_DATE('31-03-2016', '%d-%m-%Y'), 4000, 300, 90);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-G', TO_DATE('30-04-2016', '%d-%m-%Y'), 4000, 300, 90);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-G', TO_DATE('31-05-2016', '%d-%m-%Y'), 4000, 300, 90);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-G', TO_DATE('30-06-2016', '%d-%m-%Y'), 4000, 300, 90);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-H', TO_DATE('31-01-2016', '%d-%m-%Y'), 3000, 200, 70);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-H', TO_DATE('29-02-2016', '%d-%m-%Y'), 3000, 200, 70);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-H', TO_DATE('31-03-2016', '%d-%m-%Y'), 3000, 200, 70);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-H', TO_DATE('30-04-2016', '%d-%m-%Y'), 3000, 200, 70);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-H', TO_DATE('31-05-2016', '%d-%m-%Y'), 3000, 200, 70);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-H', TO_DATE('30-06-2016', '%d-%m-%Y'), 3000, 200, 70);
+insert into EMPRESA2 (CIF, DNI, FECHA, BRUTO, SS, RET)
+values ('22222222-W', '11111111-H', TO_DATE('31-07-2016', '%d-%m-%Y'), 3000, 200, 70);
+
+COMMIT;

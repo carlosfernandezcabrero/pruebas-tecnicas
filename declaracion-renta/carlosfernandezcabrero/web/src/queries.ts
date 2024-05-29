@@ -1,0 +1,47 @@
+const queries = {
+  borradores: {
+    getAll: () => `
+      SELECT DNI, BRUTOTRABAJO, BRUTOBANCO, SS, RETTRABAJO, RETBANCO, RESULTADO
+      FROM BORRADORUSUARIO
+    `,
+    getByDNI: () => `
+      SELECT DNI, BRUTOTRABAJO, BRUTOBANCO, SS, RETTRABAJO, RETBANCO, RESULTADO
+      FROM BORRADORUSUARIO
+      WHERE DNI = $1
+    `,
+    updateByDNI: () =>
+      'UPDATE BORRADORUSUARIO SET brutotrabajo = $1, brutobanco = $2 WHERE dni = $3'
+  },
+  empresa: {
+    getDetailByDNI: (dni: string) => `
+      SELECT EMPRESA.DNI, EMPRESA.CIF, EMPRESA.FECHA, EMPRESA.BRUTO, EMPRESA.SS, EMPRESA.RET
+      FROM
+        (
+          SELECT DNI, CIF, FECHA, BRUTO, SS, RET FROM EMPRESA1
+          UNION
+          SELECT DNI, CIF, FECHA, BRUTO, SS, RET FROM EMPRESA2
+        ) AS EMPRESA
+      INNER JOIN
+        (SELECT DNI FROM BANCO1 UNION SELECT DNI FROM BANCO2) AS BANCO
+      ON EMPRESA.DNI = BANCO.DNI
+      WHERE EMPRESA.DNI = '${dni}'
+    `
+  },
+  banco: {
+    getDetailByDNI: () => `
+      SELECT BANCO.DNI, BANCO.CIF, BANCO.BRUTO, BANCO.TIPO, BANCO.RET
+      FROM
+        (
+          SELECT DNI, CIF, BRUTO, TIPO, RET FROM BANCO1
+          UNION
+          SELECT DNI, CIF, BRUTO, TIPO, RET FROM BANCO2
+        ) AS BANCO
+      INNER JOIN
+        (SELECT DNI FROM EMPRESA1 UNION SELECT DNI FROM EMPRESA2) AS EMPRESA
+      ON BANCO.DNI = EMPRESA.DNI
+      WHERE BANCO.DNI = $1
+    `
+  }
+}
+
+export default queries

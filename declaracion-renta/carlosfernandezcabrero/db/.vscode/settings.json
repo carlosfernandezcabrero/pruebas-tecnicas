@@ -1,0 +1,17 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "principal",
+      "database": "main",
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "[sql]": {
+    "editor.formatOnSave": false
+  }
+}
