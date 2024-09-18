@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "bootstrap": "5.3.3",
-    "next": "14.2.3",
+    "next": "14.2.10",
     "pg": "8.11.5",
     "react": "^18",
     "react-dom": "^18"
